@@ -1,2 +1,1 @@
-# docker-swarm-visualizer-tutorial
-Docker Swarm Visualizer Tutorial [TH]
+# Docker Swarm Visualizer Tutorial [TH]
