@@ -18,7 +18,8 @@
 
 > **Note:** This only works with Docker Swarm Mode in Docker Engine 1.12.0 and later. It does not work with the separate Docker Swarm project.  
 
-เริ่มด้วยการ Provisioning Docker Host ด้วย Docker Machine ผมใช้เป็น **1 Manager 3 Worker** รวมเป็น 4 Nodes
+เริ่มด้วยการ Provisioning Docker Host ด้วย Docker Machine ผมใช้เป็น **1 Manager 3 Worker** รวมเป็น 4 Nodes  
+(-d หรือ --driver มีหลายตัวนะครับเข้าไปดูเพิ่มเติมจากลิงค์นี้ครับ https://docs.docker.com/machine/drivers/ ในตัวอย่างผมใช้เป็น virtualbox)
 
 <pre>
 $ docker-machine create -d virtualbox manager01  
@@ -143,7 +144,7 @@ r2tn81j7z9c619v5wm0df6u94 *  manager01  Ready   Active        Leader
 
 Node worker02, worker03 ก็ join แบบเดียวกับ worker01 นั่นแหละ ขอละไว้ในฐานที่เข้าใจ ถ้าเรา Join ครบแล้วจะได้หน้าตาประมาณนี้
 
-[![Visualizer](https://raw.githubusercontent.com/maprangzth/docker-swarm-visualizer-tutorial/gh-pages/visualizer-02.png)](https://github.com/maprangzth/docker-swarm-visualizer-tutorial/blob/gh-pages/visualizer-02.png) )
+[![Visualizer](https://raw.githubusercontent.com/maprangzth/docker-swarm-visualizer-tutorial/gh-pages/visualizer-02.png)](https://github.com/maprangzth/docker-swarm-visualizer-tutorial/blob/gh-pages/visualizer-02.png) 
 
 ต่อไปเราจะสร้าง Service เพิ่มอีกซักตัวเพื่อดูว่ามันกระจาย Task กันยังไง (ต้องสร้างบน Node ที่เป็น Manager นะ)
 
